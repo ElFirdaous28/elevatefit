@@ -106,6 +106,8 @@ p{
 }
 /*col-4 will edit col of images*/
 .col-4{
+    display: flex;
+    flex-direction: column;
     flex-basis: 25%;/*each image column occupies 25% each*/
     padding: 10px;
     min-width: 200px;
@@ -557,4 +559,38 @@ form a{
         display:none;/*hide product name in smaller screen*/
     }
 
+}
+
+
+/* css modifications */
+
+/* cange item section to grid */
+.items_section{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    flex-wrap: wrap;/*wrap place single line or multi lines in given space.*/ 
+    justify-content: space-around;/*"Display the flex items with space before, between, and after the lines:"*/
+}
+
+/* styling the add to chart button */
+.add_to_cart_button{
+    display: inline-block;
+    /* display: none; */
+    visibility: hidden;
+    padding: 10px;
+    margin: 5px 6px 6px 0px;
+    border: 1px solid #ff523b;
+    background-color: white;
+    text-align: center;  
+    cursor: pointer;
+}
+
+.add_to_cart_button:hover{
+    background: #ff523b;
+    color: #ffff;
+}
+/* show button when hover product */
+.items_section .col-4:hover .add_to_cart_button{
+    visibility: visible;
 }

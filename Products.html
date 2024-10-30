@@ -60,19 +60,33 @@
             <h2>All Products
 
             </h2>
+            <!-- sorting and filtering -->
+            <div>
+                <!-- select by  by category -->
+             <select onchange="filter(this.value)">
+                <option value="">Default Category</option>
+                <option value="women">Women</option>
+                <option value="men">Men</option>
+                <option value="kids">Kids</option>
+                <option value="footwear">Footwear</option>
+                <option value="accessories">Accessories</option>
+            </select>
+            <!-- sorting -->
             <select>
                 <option>Default Sorting</option>
                 <option>Sort by Price</option>
                 <option>Sort by Popularity</option>
                 <option>Sort by Sale</option>
             </select>
+            </div>
         </div>
 
-
-        <div class="row">
-
-
-            <div class="col-4">
+        <!-- items start -->
+        <div class="items_section">
+            
+            <!-- row1 -->
+            <!-- item1 -->
+            <div data-category="men" class="col-4">
                 <img src="Images/product-1.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -83,11 +97,13 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
+                <button class="add_to_cart_button">Add To Cart</button>
             </div>
 
-            <div class="col-4">
+            <!-- item2 -->
+            <div data-category="men footwear" class="col-4">
                 <img src="Images/product-2.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Black Sneakers</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -96,11 +112,12 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
+                <button class="add_to_cart_button">Add To Cart</button>
             </div>
-
-            <div class="col-4">
+            <!-- item3 -->
+            <div data-category="men" class="col-4">
                 <img src="Images/product-3.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Gray Athletic Pants</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -109,11 +126,13 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
+                <button class="add_to_cart_button">Add To Cart</button>
             </div>
 
-            <div class="col-4">
+            <!-- item 4 -->
+            <div data-category="men" class="col-4">
                 <img src="Images/product-4.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Black Printed T-shirt</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -123,16 +142,14 @@
 
                 </div>
                 <p>$50.00</p>
+                <button class="add_to_cart_button">Add To Cart</button>
             </div>
-        </div>
 
-
-
-        <div class="row">
-
-            <div class="col-4">
+            <!-- row 2 -->
+             <!-- item5 -->
+            <div data-category="footwear" class="col-4">
                 <img src="Images/product-5.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Gray sneakers</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -141,9 +158,11 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
+                <button class="add_to_cart_button">Add To Cart</button>
             </div>
 
-            <div class="col-4">
+             <!-- item6 -->
+            <div data-category="Men" class="col-4">
                 <img src="Images/product-6.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -154,11 +173,13 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
+                <button class="add_to_cart_button">Add To Cart</button>
             </div>
 
-            <div class="col-4">
+             <!-- item7 -->
+            <div data-category="footwear" class="col-4">
                 <img src="Images/product-7.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Classic Trio Sock Pack</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -167,11 +188,13 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
+                <button class="add_to_cart_button">Add To Cart</button>
             </div>
 
-            <div class="col-4">
+             <!-- item8 -->
+            <div data-category="men accessories" class="col-4">
                 <img src="Images/product-8.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Minimalist Black Watch</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -181,12 +204,14 @@
 
                 </div>
                 <p>$50.00</p>
+                <button class="add_to_cart_button">Add To Cart</button>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
+
+            <!-- row3 -->
+             <!-- itme9 -->
+            <div data-category="men accessories" class="col-4">
                 <img src="Images/product-9.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Classic Black Watch</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -195,11 +220,13 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
+                <button class="add_to_cart_button">Add To Cart</button>
             </div>
 
-            <div class="col-4">
+             <!-- itme10 -->
+            <div data-category="men foootwear" class="col-4">
                 <img src="Images/product-10.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Striking Red & Black Sneaker</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -208,11 +235,13 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
+                <button class="add_to_cart_button">Add To Cart</button>
             </div>
 
-            <div class="col-4">
+             <!-- itme11 -->
+            <div data-category="men foootwear" class="col-4">
                 <img src="Images/product-11.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Essential Gray Athletic Sneakers</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -221,11 +250,13 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
+                <button class="add_to_cart_button">Add To Cart</button>
             </div>
 
-            <div class="col-4">
+             <!-- itme12 -->
+            <div data-category="men" class="col-4">
                 <img src="Images/product-12.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Black Qthletic Pants</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -235,10 +266,11 @@
 
                 </div>
                 <p>$50.00</p>
+                <button class="add_to_cart_button">Add To Cart</button>
             </div>
         </div>
+        <!-- items end -->
 
-        `
         <div class="page-btn">
             <span>1</span>
             <span>2</span>
@@ -302,7 +334,7 @@
     </div>
 
     <!-----------------JS----------------------->
-
+    <script src="js/my_script.js"></script>
 
 </body>
 
