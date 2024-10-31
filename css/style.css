@@ -97,7 +97,7 @@ p {
 }
 /*featured products*/
 /*small container edit whole section consist of rows*/
-.small container {
+.small-container {
   max-width: 1080px;
   margin: auto; /*make images in center*/
   padding-left: 25px;
@@ -320,6 +320,9 @@ ul {
     display: block;
     cursor: pointer;
   }
+  .items_section{
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
 }
 /*All prodcuts page*/
 .row-2 {
@@ -437,7 +440,7 @@ td input {
 }
 td a {
   color: #ff523b;
-  ffont-size: 12px;
+  font-size: 12px;
 }
 td img {
   width: 80px;
@@ -562,6 +565,13 @@ form a {
   .cart-info p {
     display: none; /*hide product name in smaller screen*/
   }
+  .sort_filter{
+    margin-top: 2em;
+    flex-direction: column;
+  }
+  .items_section{
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
 }
 
 /* css modifications */
@@ -575,10 +585,9 @@ form a {
 .items_section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  align-items: center;
-  flex-wrap: wrap; /*wrap place single line or multi lines in given space.*/
-  justify-content: space-around; /*"Display the flex items with space before, between, and after the lines:"*/
+  align-items: center; /* Centers items along the vertical axis */
 }
+
 
 /* styling the add to chart button */
 .add_to_cart_button {
