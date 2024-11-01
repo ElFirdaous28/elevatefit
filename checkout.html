@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elevateFit</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!---- icon cdn link---->
+
+
+</head>
+
+<body>
+
+
+    <!--making header-->
+    <header>
+
+        <nav id="nav">
+
+            <img src="images/logo-white.png" class="logo">
+
+            <ul class="menu-bar-side">
+                <li><a href="index.html" style=" all: unset;">Home</a></li>
+                <li><a href="Products.html" style=" all: unset;">Shope</a></li>
+                <li><a href="#" style=" all: unset;">about</a></li>
+                <li><a href="#" style=" all: unset;">contact us</a></li>
+            </ul>
+
+            <ul class="menu-bar">
+
+                <li>&#36;0.00</li>
+                <li><a href="cart.html" style="color: white;"><i class='fas fa-shopping-cart'></i></a></i></li>
+
+            </ul>
+
+            <i class="fa fa-bars"></i>
+        </nav>
+
+    </header>
+
+
+    <!--Featured Products-->
+
+
+        <h2 class="title" style="margin-top: 20px;">product Oredr Form</h2>
+        <!-- chekout section -->
+        <div class="chekout_containers">
+            <form action="">
+                <!-- first name input -->
+                <div class="form-row">
+                    <label for="first_name">First Name <span class="red_star">*</span></label>
+                    <input type="text" id="first_name" placeholder="First Name">
+                </div>
+
+                <!-- last name input -->
+                <div class="form-row">
+                    <label for="last_name">First Name <span class="red_star">*</span></label>
+                    <input type="text" id="last_name" placeholder="Last Name">
+                </div>
+
+                <!-- Company Name(Optional) -->
+                <div class="form-row">
+                    <label for="">Company Name(Optional)</label>
+                    <input type="text" placeholder="yc">
+                </div>
+
+                <!-- contry select -->
+                <div class="form-row">
+                    <label for="last_name">Country <span class="red_star">*</span></label>
+                    <select id="country" name="country">
+                        <option value="morocco">Morocco</option>
+                        <option value="france">France</option>
+                        <option value="spain">Spain</option>
+                        <option value="usa">United States</option>
+                    </select>
+                </div>
+
+                <!-- Street Adress -->
+                <div class="form-row">
+                    <label for="">Street Adress <span class="red_star">*</span></label>
+                    <input type="text" placeholder="Route Rabat Imm 5 N°14">
+                </div>
+                <div class="form-row">
+                    <label for=""></label>
+                    <input type="text" placeholder="Apartment, suit, unit etc. (optional)">
+                </div>
+
+                <!-- Town / City -->
+                <div class="form-row">
+                    <label for="">Town / City <span class="red_star">*</span></label>
+                    <select id="morocco-cities" name="city">
+                        <option value="casablanca">Casablanca</option>
+                        <option value="marrakech">Marrakech</option>
+                        <option value="fes">Fès</option>
+                        <option value="rabat">Rabat</option>
+                        <option value="tangier">Tangier</option>
+                    </select>
+                </div>
+
+                <!-- State / County -->
+                <div class="form-row">
+                    <label for="">State / County <span class="red_star">*</span></label>
+                    <input type="text">
+                </div>
+
+                <!-- Postcode / ZIP -->
+                <div class="form-row">
+                    <label for="">Postcode / ZIP  <span class="red_star">*</span></label>
+                    <input type="text">
+                </div>
+
+                <!-- phone -->
+                <div class="form-row">
+                    <label for="">Phone <span class="red_star">*</span></label>
+                    <input type="tel">
+                </div>
+
+                <!-- email -->
+                <div class="form-row">
+                    <label for="">Email Address <span class="red_star">*</span></label>
+                    <input type="email">
+                </div>
+            </form>
+            <div class="place_order">
+                <div class="order-details">
+                    <div>Your order</div>
+                    <div class="form-row">Product Name x 2(Qty) <span>$88.00</span></div>
+                    <div class="form-row">Subtotal <span>$88.00</span></div>
+                    <div class="form-row">Shipping <span>Free shipping</span></div>
+                </div>
+                <div class="second_part">
+                    <div class="radio">
+                        <input type="radio" name="payment_type" id="">
+                        <div>Direct Bank Transfer</div>
+                    </div>
+                    <p>Make your payment directly into our bank account.Pleas use your Order ID as the payment reference. Your order will not be shipped until the dunds have cleared in our account</p>
+
+                    <div class="radio">
+                        <input type="radio" name="payment_type" id="">
+                        <div>Cash on Delivery</div>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="payment_type" id="">
+                        <div>Paypal</div>
+                    </div>
+                </div>
+
+                <!-- place order button -->
+                <button id="place_order">Place Order</button>
+            </div>
+        </div>
+
+    <!-------footer------->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+
+
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and Ios mobile phone.</p>
+
+
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+
+                </div>
+
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    <p>Our purpose is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.
+                    </p>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+
+                </div>
+            </div>
+            <!--add horizontal line and copyright text along with clickable link-->
+            <hr>
+            <a href="" class="copyright">Copyright 2024 - Made with ❤️ LorenzCipher</a>
+        </div>
+    </div>
+
+    <!-----------------JS----------------------->
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+
+</body>
+
+</html>

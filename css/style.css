@@ -661,3 +661,83 @@ input[type="range"] {
     gap: 10px;
     font-size: 13.3px;
   }
+
+
+
+  /* --------------------------------  chekout css -------------------------------- */
+  .red_star{
+    color: red;
+  }
+.chekout_containers{
+  background-color: #F6F6F6;
+  margin-bottom: 60px !important;
+  width: 80%;
+  margin: auto;
+  padding: 40px 30px 40px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.chekout_containers form{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.chekout_containers form input,.chekout_containers form select{
+  border:2px solid #E8F0FE;
+  width: 60%;
+  padding: 1.2em;
+}
+.chekout_containers form input:focus,.chekout_containers form select:focus{
+  border:2px solid #ff523b;
+}
+.form-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.place_order{
+  width: 35%;
+  border: 1px solid #52AD9C;
+  color: #555;
+  padding: 20px;
+}
+.order-details{
+  padding: 20px;
+}
+.order-details span{
+  color: #52AD9C;
+}
+.order-details > *:first-child{
+  background-color: #ff523b;
+  color: #fff;
+  text-align: center;
+  border: none;
+}
+.order-details > *{
+  padding: 20px 0px 20px 0px;
+  border-bottom: 1px solid #52AD9C;
+}
+
+.place_order .second_part{
+  margin: 20px;
+}
+.place_order .second_part .radio{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #000;
+}
+.place_order .second_part p{
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#place_order{
+  border: none;
+  border-radius: 50px;
+  width: 100%;
+  padding: 10px 0px 10px 0px;
+  background-color: #52AD9C;
+  color: #fff;
+  font-size: 1em;
+}
