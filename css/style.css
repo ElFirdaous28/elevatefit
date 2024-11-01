@@ -573,6 +573,13 @@ form a {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
+.remove_prodact_from_cart{
+  color: #ff523b;
+  font-size: 12px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
 
 /* css modifications */
 

@@ -61,33 +61,33 @@
                 </tr>
             </thead>
             <tbody id="body_of_table">
-              <!-- cart products will appear here -->
+                <!-- cart products will appear here -->
             </tbody>
         </table>
 
+        <!-- Total infos -->
         <div class="total-price">
-
             <table>
                 <tbody>
                     <tr>
                         <td>
                             Subtotal
                         </td>
-                        <td>$<span class="Totale"></span></td>
+                        <td>$<span id="totaleWithoutTva"></span></td>
                     </tr>
 
                     <tr>
                         <td>
-                            Tax (20%)
+                            Tax (0%)
                         </td>
-                        <td>$ <span class="Tva"></span></td>
+                        <td>$0.00 <span class="Tva"></span></td>
                     </tr>
 
                     <tr>
                         <td>
                             Total
                         </td>
-                        <td>$ <span class="totaleWithTva"></span></td>
+                        <td>$ <span id="totaleWithTva"></span></td>
                     </tr>
                 </tbody>
             </table>
@@ -147,5 +147,6 @@
     <!-----------------JS----------------------->
 
     <script src="js/cart.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
