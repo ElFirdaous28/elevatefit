@@ -105,5 +105,10 @@ window.onload = function() {
 document.addEventListener('DOMContentLoaded', function() {
     const totalInHeader = document.getElementById('total_in_header');
     total = localStorage.getItem('totalInLocalstorage');
-    totalInHeader.textContent = `$${total}`;
+    if(total){
+    totalInHeader.textContent = `$${total.toFixed(2)}`;
+    }
+    else{
+    totalInHeader.textContent = `$0`;
+    }
 });
