@@ -399,7 +399,7 @@ input:focus {
 }
 .small-img-row {
   display: flex; /*make all 4 images flexible*/
-  width: 46em;
+  width: 70%;
   justify-content: space-between; /*this will make all 4 images to take equal available space in single line without any gap, mean 25% each col, and to place gap between each col, we call col below and made 24% so to have a gap*/
 }
 .small-img-col {

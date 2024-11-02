@@ -27,15 +27,9 @@ function updateTotalInLocalstorage(){
     localStorage.setItem('totalInLocalstorage', JSON.stringify(total));
     const totalInHeader = document.getElementById('total_in_header');
     totalInHeader.textContent = `$${total}`;
-    console.log(totalInHeader);
     return total
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const totalInHeader = document.getElementById('total_in_header');
-    total = updateTotalInLocalstorage();
-    totalInHeader.textContent = `$${total}`;
-});
 
 
 
@@ -123,12 +117,13 @@ window.onload = function() {
                     <td class="product_subtotal">$${cartProdactData.productPrice*cartProdactData.productQuantity}</td>
                 </tr>`;
                 total+=cartProdactData.productPrice*cartProdactData.productQuantity;
+                console.log(total);
+                
                 // modify total and totaleWithTva
                 const totalWithTvaHtml = document.getElementById("totaleWithTva");
                 const totaleWithoutTva = document.getElementById("totaleWithoutTva");
                 totalWithTvaHtml.textContent = total;
                 totaleWithoutTva.textContent = total;
-
             }
         });
 
@@ -144,7 +139,6 @@ function change_quantity(event){
     }
     
     const selectedProductId = changedQuantity.parentElement.parentElement.getAttribute('data-product-id');
-    console.log(selectedProductId);
     const prodectTr=changedQuantity.parentElement.parentElement;
     const productSubtotalTd = prodectTr.querySelector('.product_subtotal');
     const totalWithTvaHtml = document.getElementById("totaleWithTva");
@@ -194,7 +188,6 @@ function removeProductFromCart(event){
         const ProductToRemove = event.currentTarget;
     
         const ProductToRemoveId = ProductToRemove.closest('tr').getAttribute('data-product-id');
-        console.log(ProductToRemoveId);
     
         // get all cart products from localstorage
         const localStorageItems=getAllLocalStorageItems();
