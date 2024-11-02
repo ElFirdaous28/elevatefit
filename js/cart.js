@@ -226,6 +226,7 @@ function removeProductFromCart(event){
         })
         if (cartProductToRemove) {
             localStorage.removeItem(cartProductToRemove.key);
+            updateTotalInLocalstorage();
             location.reload();
         }
       } else {
