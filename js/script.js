@@ -52,6 +52,7 @@ function productDetails(event) {
     
     // Access the first <img>, <h4>, and data-price attributes
     const productImage = clickedProduct.getElementsByTagName('img')[0]; // Get the first <img> element
+    const productId = clickedProduct.getAttribute('data-id');
 
     let productTitle;
     if (window.location.href.includes("Products.html")) {
@@ -62,18 +63,14 @@ function productDetails(event) {
     
     const productPrice = clickedProduct.getAttribute('data-price'); // Get the price from the data attribute
 
-    if (productImage) {
+    if (productImage && productTitle && productPrice) {
         const imageSrc = productImage.src; // Get the source of the image
         localStorage.setItem('productImageSrc', imageSrc);
-    }
-    if (productTitle) {
         localStorage.setItem('productTitle', productTitle.innerText);
-    }
-
-    if (productPrice) {
         localStorage.setItem('productPrice', productPrice);
+        localStorage.setItem('productDetailId', productId);
     }
-
+   
     // Redirect to the product detail page
     window.location.href = "product-detail.html"; 
 }
@@ -90,15 +87,12 @@ window.onload = function() {
         const titleDetailed = document.getElementById('detailed_prodect_title');
         const priceDetailed = document.getElementById('detailed_prodect_price');
         
-        if (imageDetailed && storedImageSrc) {
-            imageDetailed.src = storedImageSrc;    
+        if (imageDetailed && storedImageSrc && titleDetailed &&priceDetailed) {
+            imageDetailed.src = storedImageSrc;
+            titleDetailed.innerText = productTitle;
+            priceDetailed.innerText = `$${productPrice}`;  
         }
-        if (titleDetailed) {
-            titleDetailed.innerText = productTitle; 
-        }
-        if (priceDetailed) {
-            priceDetailed.innerText = `$${productPrice}`; 
-        }
+
     }
 }
 
