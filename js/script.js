@@ -63,13 +63,20 @@ function filterByCategory(category){
   }
  
 
-// details of product
+//saving details of product in localstoreg
 function productDetails(event) {
     const clickedProduct = event.currentTarget; // The clicked product element
     
     // Access the first <img>, <h4>, and data-price attributes
     const productImage = clickedProduct.getElementsByTagName('img')[0]; // Get the first <img> element
-    const productTitle = clickedProduct.getElementsByTagName('h4')[0]; // Get the first <h4> element
+
+    let productTitle;
+    if (window.location.href.includes("Products.html")) {
+        productTitle = clickedProduct.getElementsByTagName('h4')[0];
+    } else if (window.location.href.includes("cart.html")) {
+        productTitle = clickedProduct.getElementsByTagName('p')[0];
+    }
+    
     const productPrice = clickedProduct.getAttribute('data-price'); // Get the price from the data attribute
 
     if (productImage) {
@@ -87,6 +94,7 @@ function productDetails(event) {
     // Redirect to the product detail page
     window.location.href = "product-detail.html"; 
 }
+// showing product details
 window.onload = function() {
     // Check if the current URL contains "product-detail.html"
     if (window.location.href.includes("product-detail.html")) {

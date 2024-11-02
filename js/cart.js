@@ -12,6 +12,32 @@ function getAllLocalStorageItems() {
     return itemsArray; // Return the array
 }
 
+function updateTotalInLocalstorage(){
+    let total=0;
+    const localStorageItems=getAllLocalStorageItems();
+    const cartProducts=localStorageItems.filter(function(cartProduct){
+        return cartProduct.key.includes("productInCart");
+    })
+    cartProducts.forEach(cartProduct => {
+        const cartProdactData= JSON.parse(cartProduct.value);
+        if(cartProdactData && cartProdactData.productImage && cartProdactData.productTitle && cartProdactData.productPrice && cartProdactData.productQuantity){
+            total+=cartProdactData.productPrice*cartProdactData.productQuantity;
+            }
+        });
+    localStorage.setItem('totalInLocalstorage', JSON.stringify(total));
+    const totalInHeader = document.getElementById('total_in_header');
+    totalInHeader.textContent = `$${total}`;
+    console.log(totalInHeader);
+    return total
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const totalInHeader = document.getElementById('total_in_header');
+    total = updateTotalInLocalstorage();
+    totalInHeader.textContent = `$${total}`;
+});
+
+
 
 // Adding to cart
 let productCounter = 1;
@@ -38,6 +64,7 @@ function addToCart(event,Id) {
             if(existingProduct.productId===Id){
                 existingProduct.productQuantity++; // Increment quantity
                 localStorage.setItem(localStorageItem.key, JSON.stringify(existingProduct)); // Update the existing product in local storage
+                updateTotalInLocalstorage();//update total in localstorage
                 found = true;
                 break; // Exit the loop if product is found and updated
             }
@@ -56,6 +83,8 @@ function addToCart(event,Id) {
         // Save the product as a JSON string in localStorage
         const newProductKey = 'productInCart' + productCounter;
         localStorage.setItem(newProductKey, JSON.stringify(productToSave));
+        updateTotalInLocalstorage();
+
 
         // Increment cart item count
         productCounter++;
@@ -80,7 +109,7 @@ window.onload = function() {
                 bodyOfTable.innerHTML += `
                 <tr data-product-id="${cartProdactData.productId}">
                     <td>
-                        <div class="cart-info">
+                        <div class="cart-info" data-price="${cartProdactData.productPrice}" onclick="productDetails(event)">
                             <img src=${cartProdactData.productImage} alt="product-image">
                             <div>
                                 <p>${cartProdactData.productTitle}</p>
@@ -137,7 +166,7 @@ function change_quantity(event){
             // Parse the current product data
             const cartProductData = JSON.parse(cartProductToChange.value);
             // take old subtotal 
-            let oldSubTitle=cartProductData.productPrice*cartProductData.productQuantity;
+            let oldSubTotal=cartProductData.productPrice*cartProductData.productQuantity;
             cartProductData.productQuantity = changedQuantityValue; // Set the new quantity
             localStorage.setItem(cartProductToChange.key, JSON.stringify(cartProductData));
 
@@ -146,20 +175,10 @@ function change_quantity(event){
 
             // modification of product subtotal
             productSubtotalTd.textContent=`${cartProductData.productPrice*cartProductData.productQuantity}`;
-            
-            // calculate the new total
-            let newSubTitle=cartProductData.productPrice*cartProductData.productQuantity;
-            let total=0;
-            cartProducts.forEach(cartProduct => {
-                const cartProdactData= JSON.parse(cartProduct.value);
-                if(cartProdactData && cartProdactData.productImage && cartProdactData.productTitle && cartProdactData.productPrice && cartProdactData.productQuantity){
-                    // add tr
-                    total+=cartProdactData.productPrice*cartProdactData.productQuantity;    
-                }
-            });
-            total=total-oldSubTitle+newSubTitle;
+            updateTotalInLocalstorage();
                         
             // modify total and totaleWithTva
+            const total = localStorage.getItem('totalInLocalstorage');
             totalWithTvaHtml.textContent = total;
             totaleWithoutTva.textContent = total;
         }
