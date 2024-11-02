@@ -56,7 +56,7 @@ function addToCart(event,Id) {
         productPrice = document.getElementById('detailed_prodect_price').textContent;
         console.log(productPrice);
         
-        productQuantity=document.getElementById('product_quantity').value;
+        productQuantity=document.getElementById('product_quantity').value; 
     }
     else{
         productId = Id;
@@ -133,7 +133,7 @@ window.onload = function() {
                             <div>
                                 <p>${cartProdactData.productTitle}</p>
                                 <small>price: $${cartProdactData.productPrice}</small><br>
-                                <button class="remove_prodact_from_cart" onclick="removeProductFromCart(event)">Remove</button>
+                                <button class="remove_prodact_from_cart" onclick="event.stopPropagation(); removeProductFromCart(event)">Remove</button>
 
                             </div>
                         </div>
