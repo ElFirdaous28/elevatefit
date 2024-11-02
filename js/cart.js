@@ -39,12 +39,32 @@ let productCounter = 1;
 // Saving product data in localStorage
 function addToCart(event,Id) {
     const buttonClicked = event.currentTarget; // The clicked product element
-    const clickedProduct=buttonClicked.parentElement;
+    let clickedProduct=buttonClicked.parentElement;
 
+    
     // Access the first <img>, <h4>, and data-price attributes
-    const productImage = clickedProduct.getElementsByTagName('img')[0].src; // Get the first <img> element
-    const productTitle = clickedProduct.getElementsByTagName('h4')[0].textContent; // Get the text content of the first <h4> element
-    const productPrice = clickedProduct.getAttribute('data-price'); // Get the price from the data attribute
+    let productImage ='';
+    let productTitle = '';
+    let productPrice = '';
+    let productId;
+    let productQuantity = 1;
+
+    if(window.location.href.includes('product-detail.html')){
+        productId = localStorage.getItem('productDetailId');
+        productImage = document.getElementById('product-img').src;
+        productTitle = document.getElementById('detailed_prodect_title').textContent;
+        productPrice = document.getElementById('detailed_prodect_price').textContent;
+        console.log(productPrice);
+        
+        productQuantity=document.getElementById('product_quantity').value;
+    }
+    else{
+        productId = Id;
+        productImage = clickedProduct.getElementsByTagName('img')[0].src; // Get the first <img> element
+        productTitle = clickedProduct.getElementsByTagName('h4')[0].textContent; // Get the text content of the first <h4> element
+        productPrice = clickedProduct.getAttribute('data-price'); // Get the price from the data attribute
+        productQuantity = productQuantity;
+    }
 
     // check if product not in cart
     const localStorageItems=getAllLocalStorageItems();
@@ -55,8 +75,13 @@ function addToCart(event,Id) {
         if (localStorageItem.key.includes("productInCart")) {
             // Parse existing product to update it
             const existingProduct = JSON.parse(localStorageItem.value); // Ensure value is parsed correctly
-            if(existingProduct.productId===Id){
-                existingProduct.productQuantity++; // Increment quantity
+            if(existingProduct.productId===productId){
+                if(window.location.href.includes('product-detail.html')){
+                    existingProduct.productQuantity = productQuantity; // give the new value
+                }
+                else{
+                    existingProduct.productQuantity++; // Increment quantity
+                }
                 localStorage.setItem(localStorageItem.key, JSON.stringify(existingProduct)); // Update the existing product in local storage
                 updateTotalInLocalstorage();//update total in localstorage
                 found = true;
@@ -68,11 +93,11 @@ function addToCart(event,Id) {
     // If product was not found in the cart, add it as a new entry
     if (!found) {
         const productToSave = {
-            productId:Id,
+            productId: productId,
             productImage: productImage,
             productTitle: productTitle,
             productPrice: productPrice,
-            productQuantity: 1,
+            productQuantity: productQuantity,
         };
         // Save the product as a JSON string in localStorage
         const newProductKey = 'productInCart' + productCounter;

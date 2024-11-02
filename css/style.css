@@ -73,10 +73,12 @@ p {
   margin-left: 25px;
   border-radius: 30px;
   transition: background 0.5s; /*below I have specified the change in button color when hover. this transition will delay color change by 0.5 sec*/
+  border: none;
 }
 .btn:hover {
   background: #563434;
 }
+
 .header {
   background: radial-gradient(#fff, #ffd6d6);
 }
