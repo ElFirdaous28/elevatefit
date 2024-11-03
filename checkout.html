@@ -62,44 +62,56 @@
                     <label for="first_name">First Name <span class="red_star">*</span></label>
                     <input type="text" id="first_name" placeholder="First Name">
                 </div>
+                <p class="form_error"></p>
+
 
                 <!-- last name input -->
                 <div class="form-row">
                     <label for="last_name">First Name <span class="red_star">*</span></label>
                     <input type="text" id="last_name" placeholder="Last Name">
                 </div>
+                <p class="form_error"></p>
+
 
                 <!-- Company Name(Optional) -->
                 <div class="form-row">
                     <label for="">Company Name(Optional)</label>
-                    <input type="text" placeholder="yc">
+                    <input type="text" id="company_name" placeholder="yc">
                 </div>
+                <p class="form_error"></p>
+
 
                 <!-- contry select -->
                 <div class="form-row">
                     <label for="last_name">Country <span class="red_star">*</span></label>
-                    <select id="country" name="country">
+                    <select id="country" name="country" id="country">
+                        <option value="">--Country--</option>
                         <option value="morocco">Morocco</option>
                         <option value="france">France</option>
                         <option value="spain">Spain</option>
                         <option value="usa">United States</option>
                     </select>
                 </div>
+                <p class="form_error"></p>
+
 
                 <!-- Street Adress -->
                 <div class="form-row">
                     <label for="">Street Adress <span class="red_star">*</span></label>
-                    <input type="text" placeholder="Route Rabat Imm 5 N°14">
+                    <input type="text" placeholder="Route Rabat Imm 5 N°14" id="street_adress">
                 </div>
                 <div class="form-row">
                     <label for=""></label>
                     <input type="text" placeholder="Apartment, suit, unit etc. (optional)">
                 </div>
+                <p class="form_error"></p>
+
 
                 <!-- Town / City -->
                 <div class="form-row">
                     <label for="">Town / City <span class="red_star">*</span></label>
-                    <select id="morocco-cities" name="city">
+                    <select name="city" id="town_city">
+                        <option value="">--Town /City--</option>
                         <option value="casablanca">Casablanca</option>
                         <option value="marrakech">Marrakech</option>
                         <option value="fes">Fès</option>
@@ -107,30 +119,40 @@
                         <option value="tangier">Tangier</option>
                     </select>
                 </div>
+                <p class="form_error"></p>
+
 
                 <!-- State / County -->
                 <div class="form-row">
                     <label for="">State / County <span class="red_star">*</span></label>
-                    <input type="text">
+                    <input type="text" id="state_county">
                 </div>
+                <p class="form_error"></p>
+
 
                 <!-- Postcode / ZIP -->
                 <div class="form-row">
                     <label for="">Postcode / ZIP  <span class="red_star">*</span></label>
-                    <input type="text">
+                    <input type="text" id="zip">
                 </div>
+                <p class="form_error"></p>
+
 
                 <!-- phone -->
                 <div class="form-row">
                     <label for="">Phone <span class="red_star">*</span></label>
-                    <input type="tel">
+                    <input type="tel" id="phone_number">
                 </div>
+                <p class="form_error"></p>
+
 
                 <!-- email -->
                 <div class="form-row">
                     <label for="">Email Address <span class="red_star">*</span></label>
-                    <input type="email">
+                    <input type="email" id="email">
                 </div>
+                <p class="form_error"></p>
+
             </form>
             <div class="place_order">
                 <div class="order-details">
@@ -157,7 +179,7 @@
                 </div>
 
                 <!-- place order button -->
-                <button id="place_order">Place Order</button>
+                <button id="place_order_button">Place Order</button>
             </div>
         </div>
 
@@ -214,7 +236,8 @@
     </div>
 
     <!-----------------JS----------------------->
-
+    <script src="js/script.js"></script>
+    <script src="js/checkout.js"></script>
 </body>
 
 </html>

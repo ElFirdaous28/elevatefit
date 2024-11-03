@@ -294,6 +294,13 @@ ul {
 
 /*menu icon will be visible for width of page less than 800px, above 800px or larger screen it will not be visible and we get navbar */
 @media only screen and (max-width: 800px) {
+  .chekout_containers{
+    flex-direction: column;
+    width: 98% !important;
+  }
+  .chekout_containers form,.chekout_containers .place_order{
+    width: 100% !important;
+  }
   nav ul {
     /*for whole dropdown menu chart*/
     /* position: absolute;
@@ -670,6 +677,11 @@ input[type="range"] {
   .red_star{
     color: red;
   }
+  .form_error{
+    color: #ff523b;
+    text-align: right;
+     font-size: 0.9em;
+  }
 .chekout_containers{
   background-color: #F6F6F6;
   margin-bottom: 60px !important;
@@ -689,6 +701,10 @@ input[type="range"] {
   width: 60%;
   padding: 1.2em;
 }
+.chekout_containers form select option:first-child {
+  color: #ccc;
+}
+
 .chekout_containers form input:focus,.chekout_containers form select:focus{
   border:2px solid #ff523b;
 }
@@ -734,7 +750,7 @@ input[type="range"] {
   margin-bottom: 20px;
 }
 
-#place_order{
+#place_order_button{
   border: none;
   border-radius: 50px;
   width: 100%;
