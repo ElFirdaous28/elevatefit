@@ -759,3 +759,12 @@ input[type="range"] {
   color: #fff;
   font-size: 1em;
 }
+
+#Layer_1 .cls-1 {
+  stroke: #ff523b;    /* Red stroke color */
+  stroke-width: 4; /* Adjust thickness as needed */
+  fill: white;    /* White fill color */
+}
+#Layer_1 .cls-1:hover{
+  fill: #ff523b;
+}

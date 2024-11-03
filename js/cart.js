@@ -30,9 +30,6 @@ function updateTotalInLocalstorage(){
     return total
 }
 
-
-
-
 // Adding to cart
 let productCounter = 1;
 
@@ -51,16 +48,23 @@ function addToCart(event,Id) {
 
     if(window.location.href.includes('product-detail.html')){
         productId = localStorage.getItem('productDetailId');
-        productImage = document.getElementById('product-img').src;
+        productImage = document.getElementById('product-img').getAttribute('src');
         productTitle = document.getElementById('detailed_prodect_title').textContent;
         productPrice = document.getElementById('detailed_prodect_price').textContent;
         console.log(productPrice);
         
         productQuantity=document.getElementById('product_quantity').value; 
     }
+    else if(window.location.href.includes('wishlist.html')){
+        productId = Id;
+        productImage =clickedProduct.parentElement.querySelector('img').getAttribute('src');
+        productTitle =clickedProduct.parentElement.querySelector('p');
+        productTitle =clickedProduct.parentElement.children[1].querySelector('span').textContent;
+        productQuantity = 1; 
+    }
     else{
         productId = Id;
-        productImage = clickedProduct.getElementsByTagName('img')[0].src; // Get the first <img> element
+        productImage = clickedProduct.getElementsByTagName('img')[0].getAttribute('src'); // Get the first <img> element
         productTitle = clickedProduct.getElementsByTagName('h4')[0].textContent; // Get the text content of the first <h4> element
         productPrice = clickedProduct.getAttribute('data-price'); // Get the price from the data attribute
         productQuantity = productQuantity;

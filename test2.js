@@ -64,7 +64,7 @@ function productDetails(event) {
     const productPrice = clickedProduct.getAttribute('data-price'); // Get the price from the data attribute
 
     if (productImage && productTitle && productPrice) {
-        const imageSrc = productImage.getAttribute('src'); // Get the source of the image
+        const imageSrc = productImage.src; // Get the source of the image
         localStorage.setItem('productImageSrc', imageSrc);
         localStorage.setItem('productTitle', productTitle.innerText);
         localStorage.setItem('productPrice', productPrice);
@@ -86,13 +86,16 @@ window.onload = function() {
         const imageDetailed = document.getElementById('product-img');
         const titleDetailed = document.getElementById('detailed_prodect_title');
         const priceDetailed = document.getElementById('detailed_prodect_price');
+        const IdDetailed = document.getElementById('productDetailId');
         
-        if (imageDetailed && storedImageSrc && titleDetailed &&priceDetailed) {
+        if (imageDetailed && storedImageSrc && titleDetailed &&priceDetailed &&IdDetailed) {
             imageDetailed.src = storedImageSrc;
             titleDetailed.innerText = productTitle;
-            priceDetailed.innerText = `${productPrice}`;  
+            priceDetailed.innerText = `$${productPrice}`;
+            const addToCartButton = document.getElementById('add_to_cart_button');
+            addToCartButton.setAttribute('onclick', `addToCart(event,${IdDetailed})`);
+            alert(addToCartButton.getAttribute('onclick'))         
         }
-
     }
 }
 
@@ -100,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalInHeader = document.getElementById('total_in_header');
     total = localStorage.getItem('totalInLocalstorage');
     if(total){
-    totalInHeader.textContent = `$${total}`;
+    totalInHeader.textContent = `$${total.toFixed(2)}`;
     }
     else{
     totalInHeader.textContent = `$0`;

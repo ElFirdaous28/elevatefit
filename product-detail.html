@@ -72,8 +72,14 @@
                     </select>
                     
                     <!--no of products-->
-                    <input id="product_quantity" type="number" value="1">
-                    <button class="btn" id="add_to_cart_button" onclick="addToCart(event,1)">Add To Cart</button><!--add to cart button-->
+                    <div style="display: flex;align-items: center; justify-content: space-between;">
+                        <input id="product_quantity" type="number" value="1">
+                        <button class="btn" id="add_to_cart_button" onclick="addToCart(event,1)">Add To Cart</button><!--add to cart button-->
+                        <button onclick="event.stopPropagation(); addToWishList(event,1)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                            <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                            </svg>
+                        </button>
+                    </div>
                     <h3>Product Details <i class="fa fa-indent" aria-hidden="true"></i></h3>
                     <br>
                     <p>Give Your summer wardrobe a style upgrade with the HTX Men's 
@@ -229,6 +235,7 @@
     <!-----------------JS----------------------->
 
     <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
     <script src="js/script.js"></script>
     
     </body>

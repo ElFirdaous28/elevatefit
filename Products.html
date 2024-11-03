@@ -33,6 +33,7 @@
             <ul class="menu-bar-side">
                 <li><a href="index.html" style=" all: unset;">Home</a></li>
                 <li><a href="Products.html" style=" all: unset;">Shope</a></li>
+                <li><a href="wishlist.html" style=" all: unset;">WishList</a></li>
                 <li><a href="#" style=" all: unset;">about</a></li>
                 <li><a href="#" style=" all: unset;">contact us</a></li>
             </ul>
@@ -92,7 +93,7 @@
             
             <!-- row1 -->
             <!-- item1 -->
-            <div data-category="men" data-price="50" class="col-4 product_item" onclick="productDetails(event)">
+            <div data-category="men" data-price="50" class="col-4 product_item" onclick="productDetails(event)" data-id="1">
                 <img src="Images/product-1.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -103,9 +104,12 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,1)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
                 <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,1)" data-id="1">Add To Cart</button>
             </div>
-
             <!-- item2 -->
             <div data-category="men footwear" data-price="100" class="col-4 product_item" onclick="productDetails(event,2)" data-id="2">
                 <img src="Images/product-2.jpg">
@@ -118,6 +122,10 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$100.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,2)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
                 <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,2)">Add To Cart</button>
             </div>
             <!-- item3 -->
@@ -132,6 +140,10 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$150.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,3)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
                 <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,3)">Add To Cart</button>
             </div>
 
@@ -148,6 +160,10 @@
 
                 </div>
                 <p>$100.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,4)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
                 <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,4)">Add To Cart</button>
             </div>
 
@@ -164,6 +180,10 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$200.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,5)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
                 <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,5)">Add To Cart</button>
             </div>
 
@@ -179,6 +199,10 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$250.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,6)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
                 <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,6)">Add To Cart</button>
             </div>
 
@@ -194,6 +218,10 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,7)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
                 <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,7)">Add To Cart</button>
             </div>
 
@@ -210,6 +238,10 @@
 
                 </div>
                 <p>$150.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,8)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
                 <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,8)">Add To Cart</button>
             </div>
 
@@ -226,6 +258,10 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$50.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,9)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
                 <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,9)">Add To Cart</button>
             </div>
 
@@ -241,6 +277,10 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$200.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,10)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
                 <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,10)">Add To Cart</button>
             </div>
 
@@ -256,6 +296,10 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
                 <p>$100.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,11)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
                 <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,11)">Add To Cart</button>
             </div>
 
@@ -272,6 +316,10 @@
 
                 </div>
                 <p>$250.00</p>
+                <button onclick="event.stopPropagation(); addToWishList(event,12)" style="border: none;background-color: white; width: 30px; padding: 4px;">
+                    <svg width="22"heigth="22" id="Layer_1"data-name="Layer 1"xmlns="http://www.w3.org/2000/svg"viewBox="0 0 122.88 107.39"><defs></defs><title>Add To wishlist</title><path class="cls-1"d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+                    </svg>
+                </button>
                 <button class="add_to_cart_button" onclick="event.stopPropagation(); addToCart(event,12)">Add To Cart</button>
             </div>
         </div>
@@ -342,6 +390,7 @@
     <!-----------------JS----------------------->
     <script src="js/script.js"></script>
     <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
 
 </body>
 
