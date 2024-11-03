@@ -106,3 +106,14 @@ document.addEventListener('DOMContentLoaded', function() {
     totalInHeader.textContent = `$0`;
     }
 });
+
+let btnOfHeader = document.getElementById("btn-header");
+        let navBare = document.getElementById("navBare");
+        btnOfHeader.addEventListener("click" , btn=>{
+            if(navBare.classList.contains("none")){
+                navBare.classList.remove("none")
+            }
+            else {
+            navBare.classList.add("none")
+            }
+        })

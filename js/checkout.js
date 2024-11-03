@@ -147,3 +147,22 @@ function emailValidate(element){
         return false;
     }
 }
+
+document.addEventListener("DOMContentLoaded",function(){
+    let total=0;
+    const localStorageItems=getAllLocalStorageItems();
+    const cartProducts=localStorageItems.filter(function(cartProduct){
+        return cartProduct.key.includes("productInCart");
+    })
+    cartProducts.forEach(cartProduct => {
+        const cartProdactData= JSON.parse(cartProduct.value);
+        if(cartProdactData && cartProdactData.productImage && cartProdactData.productTitle && cartProdactData.productPrice && cartProdactData.productQuantity){
+            total+=cartProdactData.productPrice*cartProdactData.productQuantity;
+            }
+        });
+    localStorage.setItem('totalInLocalstorage', JSON.stringify(total));
+    const totalInHeader = document.getElementById('total_in_header');
+    
+    totalInHeader.textContent = `$${total}`;
+    return total
+})

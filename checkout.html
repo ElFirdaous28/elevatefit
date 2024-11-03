@@ -30,10 +30,10 @@
 
             <img src="images/logo-white.png" class="logo">
 
-            <ul class="menu-bar-side">
+            <ul class="menu-bar-side none " id="navBare">
                 <li><a href="index.html" style=" all: unset;">Home</a></li>
                 <li><a href="Products.html" style=" all: unset;">Shope</a></li>
-                <li><a href="wishlist.html" style="all: unset">WishList</a></li>
+                <li><a href="wishlist.html" style=" all: unset;">WishList</a></li>
                 <li><a href="#" style=" all: unset;">about</a></li>
                 <li><a href="#" style=" all: unset;">contact us</a></li>
             </ul>
@@ -45,8 +45,9 @@
 
             </ul>
 
-            <i class="fa fa-bars"></i>
+            <i id="btn-header" class="fa fa-bars"></i>
         </nav>
+
 
     </header>
 
@@ -158,9 +159,9 @@
             <div class="place_order">
                 <div class="order-details">
                     <div>Your order</div>
-                    <div class="form-row">Product Name x 2(Qty) <span>$88.00</span></div>
-                    <div class="form-row">Subtotal <span>$88.00</span></div>
-                    <div class="form-row">Shipping <span>Free shipping</span></div>
+                    <div class="form-row">Product Name x 2(Qty) <span class="total">$88.00</span></div>
+                    <div class="form-row">Subtotal <span class="total">$88.00</span></div>
+                    <div class="form-row">Shipping <span >Free shipping</span></div>
                 </div>
                 <div class="second_part">
                     <div class="radio">
@@ -239,6 +240,19 @@
     <!-----------------JS----------------------->
     <script src="js/script.js"></script>
     <script src="js/checkout.js"></script>
+    <script>
+        // Get the saved value from localStorage
+const totalValue = localStorage.getItem('totalInLocalstorage');
+
+// Select all elements with the class "total"
+const totalElements = document.querySelectorAll('.total');
+
+// Assign the retrieved value to each "total" element
+totalElements.forEach(element => {
+  element.textContent = `$ ${totalValue}`;
+});
+
+    </script>
 </body>
 
 </html>
