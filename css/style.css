@@ -461,7 +461,7 @@ td small {
   margin-left: 0px;
 }
 
-.total-price {
+.total-price,.checkout {
   display: flex;
   justify-content: flex-end; /*put content with max width at the end, if flex start, then put content at start with max width as we mentioned max width below*/
 }
@@ -608,7 +608,6 @@ form a {
 /* styling the add to chart button */
 .add_to_cart_button {
   display: inline-block;
-  /* display: none; */
   visibility: hidden;
   padding: 10px;
   margin: 5px 6px 6px 0px;
@@ -617,10 +616,19 @@ form a {
   text-align: center;
   cursor: pointer;
 }
+.chekout_button{
+  display: inline-block;
+  padding: 10px 30px 10px 30px;
+  margin: 20px 0px 6px 0px;
+  border: 1px solid #ff523b;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+}
 
-.add_to_cart_button:hover {
+.add_to_cart_button:hover,.chekout_button:hover {
   background: #ff523b;
-  color: #ffff;
+  color: #ffff !important;
 }
 /* show button when hover product */
 .items_section .col-4:hover .add_to_cart_button {
